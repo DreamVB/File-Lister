@@ -13,19 +13,21 @@ f.close()
 footer = """	</body>
 </html>"""
 
-if len(sys.argv) == 1:
+if len(sys.argv) < 3:
     print("Folder path is required.")
     exit(1)
 
 # Get the path that we will be scaning
 scan_path = sys.argv[1]
+outfile = sys.argv[2]
+
 # Extract scan folder path
 lz_path = scan_path[0:scan_path.rindex("\\") + 1]
 
 # Set buffer to html include data
 strbuff = header
 # Add page header
-strbuff += "<h1>File Listing of<span>" + lz_path + "</span></h1>\n"
+strbuff += "<span class='path'>" + lz_path + "</span>"
 # Add tag for unsorted list
 strbuff += "<ul>\n"
 
@@ -45,5 +47,7 @@ for file in results:
 strbuff += "<ul></div>\n"
 # Add html footer
 strbuff += footer
-# Push the data to the user
-print(strbuff)
+# Save the data to the output filename
+f = open(outfile,"w")
+f.write(strbuff)
+f.close()
