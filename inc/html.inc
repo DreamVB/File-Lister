@@ -16,13 +16,15 @@ body,html{
 
 a{font-family: Verdana;color: #000;text-decoration: none;}
 a:hover{color: 400;color: red}
-.wraper{margin: 0 auto;max-width: 940px;}
-.wraper h1{padding-top: 60px;padding-bottom: 60px;background-color: #eee;text-align: center;margin-top: -1px;color: #7f3fbf}
-ul{padding-left: 20px;list-style-type: none;}
-ul li{padding: 4px;border-bottom: 1px solid #eee;}
-.wraper h1 span{display: block;font-size: 16px;color: #555;}
-
+.wraper{margin: 0 auto;max-width: 940px;border-top: 8px solid #ddd;}
+.wraper h1{padding-top: 75px;padding-bottom: 75px;background-color: #eee;text-align: center;color: #7f3fbf;margin-top: -1px;}
+ul{padding-left: 20px;list-style-type: none;overflow-x: hidden;}
+ul li{padding: 8px;border-bottom: 1px solid #eee;}
+ul li:hover{background-color: #f9f9f9;}
+.wraper h1 span{background-color: #666;color: #fff;padding: 20px;font-size: 32px;}
+.path{text-align: center;display: block;font-size: 15px;color:#888;background-color: #eee;padding: 8px 12px;}
 		</style>
 	</head>
 	<body>
 	<div class="wraper">
+	<h1><span>File Listing</span></h1>
